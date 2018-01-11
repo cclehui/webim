@@ -2,6 +2,9 @@
 /.idea/
 *.lock
 *.log
+*.swp
+*.swn
+*.swo
 /log/
 /client/uploads/
 /framework

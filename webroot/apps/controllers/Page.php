@@ -10,7 +10,7 @@ class Page extends \Swoole\Controller
         $this->session->start();
         if (!empty($_SESSION['isLogin']))
         {
-            chatroom:
+chatroom:
             $this->http->redirect('/page/chatroom/');
             return;
         }
@@ -21,7 +21,7 @@ class Page extends \Swoole\Controller
             $user = $curl->get($this->config['login']['get_user_info'] . '?token=' . urlencode($_GET['token']));
             if (empty($user))
             {
-                login:
+login:
                 $this->http->redirect($this->config['login']['passport'] . '?return_token=1&refer=' . urlencode($this->config['webim']['server']['origin']));
             }
             else
@@ -35,6 +35,10 @@ class Page extends \Swoole\Controller
         {
             goto login;
         }
+    }
+
+    function login() {
+        
     }
 
     function chatroom()
