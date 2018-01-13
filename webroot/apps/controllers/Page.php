@@ -37,9 +37,6 @@ login:
         }
     }
 
-    function login() {
-        
-    }
 
     function chatroom()
     {
