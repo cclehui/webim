@@ -12,6 +12,16 @@ namespace App\Controller;
 class User extends \Swoole\Controller {
 
     function login() {
-        $this->display('user/login.php');
+        $this->display('user/login_tpl.php');
+    }
+
+    function login_ajax() {
+
+        $result = [
+            'time' => time()
+
+        ];
+
+        echo $this->json($result);
     }
 }
